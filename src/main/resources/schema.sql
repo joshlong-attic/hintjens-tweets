@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS `tweets` (
+  `id` bigint(20) NOT NULL serial ,
+  `from_user` varchar(200) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `tweet_id` bigint(20) NOT NULL,
+  `id_string` varchar(200) DEFAULT NULL,
+  `language_code` varchar(10) DEFAULT NULL,
+  `username` varchar(200) DEFAULT NULL,
+  `in_reply_to_status_id` varchar(200) DEFAULT NULL,
+  `in_reply_to_user_id` bigint(20) DEFAULT NULL,
+  `profile_image_url` varchar(200) DEFAULT NULL,
+  `text` text ,
+  `in_reply_to_screename` VARCHAR(255) DEFAULT NULL,
+  `to_user_id` VARCHAR(255) DEFAULT NULL,
+  `hashtags` VARCHAR(255) DEFAULT NULL,
+  `retweeted_count` bigint(20) DEFAULT 0,
+  `retweeted_status_id` bigint(20) DEFAULT NULL,
+  `unmodified_text` VARCHAR(500) DEFAULT NULL,
+  `source` VARCHAR(500) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
